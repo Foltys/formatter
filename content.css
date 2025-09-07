@@ -1,0 +1,289 @@
+/* Text Format Viewer Modal Styles */
+
+.text-format-modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 999999 !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  backdrop-filter: blur(3px) !important;
+  padding-bottom: 10px !important;
+}
+
+.text-format-content {
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  width: 90% !important;
+  max-width: 700px !important;
+  max-height: 85vh !important;
+  overflow: hidden !important;
+  position: relative !important;
+  animation: modalSlideIn 0.3s ease-out !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0 !important;
+    transform: translateY(-50px) scale(0.9) !important;
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+  }
+}
+
+.text-format-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 20px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.text-format-header h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+.text-format-close {
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+  padding: 5px 10px !important;
+  border-radius: 50% !important;
+  transition: background 0.2s ease !important;
+  width: 35px !important;
+  height: 35px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.text-format-close:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.text-format-input-area {
+  padding: 20px 25px !important;
+  border-bottom: 1px solid #e9ecef !important;
+  flex-shrink: 0 !important;
+}
+
+.text-format-input {
+  width: 100% !important;
+  padding: 12px !important;
+  border: 2px solid #e9ecef !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  resize: vertical !important;
+  min-height: 100px !important;
+  max-height: 150px !important;
+  background: #f8f9fa !important;
+  color: #333 !important;
+  box-sizing: border-box !important;
+  /* Force plain text styling and prevent formatting inheritance */
+  text-decoration: none !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+}
+
+.text-format-input:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.text-format-output-area {
+  padding: 20px 25px !important;
+  border-bottom: 1px solid #e9ecef !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.text-format-display {
+  padding: 12px !important;
+  flex: 1 !important;
+  min-height: 100px !important;
+  max-height: 250px !important;
+  overflow-y: auto !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  background: #f8f9fa !important;
+  margin: 0 !important;
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+}
+
+/* Custom scrollbar for display area */
+.text-format-display::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.text-format-display::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+.text-format-display::-webkit-scrollbar-thumb {
+  background: #c1c1c1 !important;
+  border-radius: 4px !important;
+}
+
+.text-format-display::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8 !important;
+}
+
+.text-format-actions {
+  padding: 15px 20px !important;
+  display: flex !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+  background: white !important;
+  flex-wrap: wrap !important;
+  flex-shrink: 0 !important;
+  border-top: 1px solid #f1f1f1 !important;
+}
+
+.text-format-btn {
+  padding: 10px 16px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: inherit !important;
+}
+
+.text-format-btn.format-btn {
+  background: #28a745 !important;
+  color: white !important;
+}
+
+.text-format-btn.format-btn:hover {
+  background: #218838 !important;
+  transform: translateY(-1px) !important;
+}
+
+.text-format-btn.copy-btn {
+  background: #667eea !important;
+  color: white !important;
+}
+
+.text-format-btn.copy-btn:hover {
+  background: #5a6fd8 !important;
+  transform: translateY(-1px) !important;
+}
+
+.text-format-btn.secondary-btn {
+  background: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.text-format-btn.secondary-btn:hover {
+  background: #e0a800 !important;
+  transform: translateY(-1px) !important;
+}
+
+.text-format-btn.close-btn {
+  background: #6c757d !important;
+  color: white !important;
+}
+
+.text-format-btn.close-btn:hover {
+  background: #5a6268 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Notification styles */
+.text-format-notification {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  z-index: 1000000 !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.3s ease !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.text-format-notification.success {
+  background: #28a745 !important;
+}
+
+.text-format-notification.error {
+  background: #dc3545 !important;
+}
+
+.text-format-notification.show {
+  transform: translateX(0) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-format-content {
+    width: 95% !important;
+    max-height: 95vh !important;
+    margin: 10px !important;
+  }
+
+  .text-format-actions {
+    flex-direction: column !important;
+  }
+
+  .text-format-btn {
+    width: 100% !important;
+  }
+
+  .text-format-input {
+    min-height: 100px !important;
+  }
+
+  .text-format-display {
+    max-height: 200px !important;
+  }
+}
+
+/* Prevent text selection on modal background */
+.text-format-modal {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+/* Allow text selection in input and display areas */
+.text-format-input,
+.text-format-display {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
