@@ -3,7 +3,7 @@
   "name": "Text Format Viewer",
   "version": "1.0.0",
   "description": "View selected text with proper formatting - converts \\n to actual line breaks",
-  "permissions": ["clipboardRead"],
+  "permissions": ["activeTab", "clipboardRead"],
   "action": {
     "default_title": "Text Format Viewer"
   },
